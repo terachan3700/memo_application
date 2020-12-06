@@ -1,0 +1,9 @@
+.index-title {
+  display: flex;
+  margin-top: 20px
+}
+.new-link {
+  height: 40px;
+  font-size: 15px;
+  margin-left: 150px;
+}

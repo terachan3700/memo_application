@@ -29,7 +29,7 @@ Sinatoraを使ったmemoアプリケーション
 |GET|/memos|全てのメモ一覧を表示する
 |GET|/memos/new|新規メモを作成する画面を表示する|
 |POST|/memos|新規メモを作成する|
-|GET|/memos/:id|特定のメモを作成する|
+|GET|/memos/:id|特定のメモを表示する|
 |GET|/memos/:id/edit|特定のメモを編集する画面を表示する|
-|PUT|/memos/:id|特定のメモを編集する|
+|PATCH|/memos/:id|特定のメモを編集する|
 |DELETE|/memos/:id|特定のメモを削除する|

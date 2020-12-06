@@ -1,0 +1,5 @@
+<div class="list-group w-50">
+  <% @memos.each do |memo| %>
+    <a href="<%= "/memos/#{memo[:id]}" %>" class="list-group-item list-group-item-action"><%= memo[:title] %></a>
+  <% end %>
+</div>
