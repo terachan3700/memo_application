@@ -2,16 +2,19 @@
 
 require 'sinatra'
 require 'sinatra/reloader'
-require 'csv'
-require './models/data_file'
+require './models/memo'
+
+before do
+  @memo_instance = Memo.instance
+end
 
 get '/' do
-  @memos = DataFile.read_csv_data
+  @memos = @memo_instance.select_all
   erb :index
 end
 
 get '/memos' do
-  @memos = DataFile.read_csv_data
+  @memos = @memo_instance.select_all
   erb :index
 end
 
@@ -20,29 +23,29 @@ get '/memos/new' do
 end
 
 post '/memos' do
-  DataFile.create_new_memo DataFile.increment_max_id, params[:title], params[:memo]
+  @memo_instance.create(params[:title], params[:memo])
   redirect '/'
   erb :index
 end
 
 get '/memos/:id' do |id|
-  @memo = DataFile.select_memo id
+  @memo = @memo_instance.select id
   erb :show
 end
 
 get '/memos/:id/edit' do |id|
-  @memo = DataFile.select_memo id
+  @memo = @memo_instance.select id
   erb :edit
 end
 
 patch '/memos/:id' do |id|
-  DataFile.update_memo id, params[:title], params[:memo]
+  @memo_instance.update(id, params[:title], params[:memo])
   redirect '/'
   erb :index
 end
 
 delete '/memos/:id' do |id|
-  DataFile.delete_memo id
+  @memo_instance.delete id
   redirect '/'
   erb :index
 end

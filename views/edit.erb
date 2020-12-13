@@ -1,6 +1,6 @@
 <div class="container">
 <%# if @memo %>
-<form class="form-horizontal" action="/memos<%= "/#{@memo[:id]}" if @memo %>" method="post">
+<form class="form-horizontal" action="/memos<%= "/#{@edit_memo["id"]}" if @memo %>" method="post">
   <div class="form-group">
     <div class="w-50">
       <input type="text" name="title" class="form-control" value="<%= h(@memo[:title]) if @memo %>">

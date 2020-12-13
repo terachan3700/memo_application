@@ -14,10 +14,10 @@
 
   <div class="row">
     <div class="col-md-2">
-      <a href="<%= "/memos/#{@memo[:id]}/edit" %>" class="btn btn-primary active new-link" role="button" aria-pressed="true">更新</a>
+      <a href="<%= "/memos/#{@memo["id"]}/edit" %>" class="btn btn-primary active new-link" role="button" aria-pressed="true">更新</a>
     </div>
     <div class="col-md-2">
-      <form class="form-horizontal" action="/memos/<%= @memo[:id] %>" method="post">
+      <form class="form-horizontal" action="/memos/<%= @memo["id"] %>" method="post">
         <div class="form-group">
           <div class="col-xs-5">
             <input type="hidden" name="_method" value="DELETE">

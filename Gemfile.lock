@@ -45,6 +45,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    pg (1.2.3)
     popper_js (1.16.0)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -102,6 +103,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.5.0)
+  pg
   sinatra
   sinatra-contrib
 
