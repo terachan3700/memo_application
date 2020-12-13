@@ -37,11 +37,6 @@ Sinatoraを使ったmemoアプリケーション
 ### DB
 postgresqlを使用する。
 
-#### database作成
-```sql
-create database fjord_db;
-```
-
 ####  テーブル作成
 ```sql
 CREATE TABLE memos (
