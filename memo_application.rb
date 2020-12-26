@@ -11,6 +11,7 @@ get '/' do
 end
 
 get '/memos' do
+  @memos = DataFile.read_csv_data
   erb :index
 end
 
@@ -19,7 +20,7 @@ get '/memos/new' do
 end
 
 post '/memos' do
-  create_new_memo incriment_max_id, h(params[:title]), h(params[:memo])
+  create_new_memo increment_max_id, h(params[:title]), h(params[:memo])
   redirect '/'
   erb :index
 end

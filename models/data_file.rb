@@ -24,7 +24,7 @@ class DataFile
     end
   end
 
-  def self.incriment_max_id
+  def self.increment_max_id
     max_id = File.open(MAX_ID_FILE_PATH, 'r', &:read).to_i + 1
     File.open(MAX_ID_FILE_PATH, 'w') { |id| id.puts(max_id) }
     max_id
