@@ -9,8 +9,7 @@ before do
 end
 
 get '/' do
-  @memos = @memo_instance.select_all
-  erb :index
+  redirect '/memos'
 end
 
 get '/memos' do
