@@ -101,6 +101,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   bootstrap (~> 4.5.0)
@@ -110,4 +111,4 @@ DEPENDENCIES
   sinatra-contrib
 
 BUNDLED WITH
-   2.1.4
+   2.2.1
