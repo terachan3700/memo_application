@@ -20,29 +20,29 @@ get '/memos/new' do
 end
 
 post '/memos' do
-  create_new_memo increment_max_id, h(params[:title]), h(params[:memo])
+  DataFile.create_new_memo DataFile.increment_max_id, params[:title], params[:memo]
   redirect '/'
   erb :index
 end
 
 get '/memos/:id' do |id|
-  @memo = select_memo id
+  @memo = DataFile.select_memo id
   erb :show
 end
 
 get '/memos/:id/edit' do |id|
-  @memo = select_memo id
+  @memo = DataFile.select_memo id
   erb :edit
 end
 
 patch '/memos/:id' do |id|
-  update_memo id, h(params[:title]), h(params[:memo])
+  DataFile.update_memo id, params[:title], params[:memo]
   redirect '/'
   erb :index
 end
 
 delete '/memos/:id' do |id|
-  delete_memo id
+  DataFile.delete_memo id
   redirect '/'
   erb :index
 end

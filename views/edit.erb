@@ -3,12 +3,12 @@
 <form class="form-horizontal" action="/memos<%= "/#{@memo[:id]}" if @memo %>" method="post">
   <div class="form-group">
     <div class="w-50">
-      <input type="text" name="title" class="form-control" value="<%= @memo[:title] if @memo %>">
+      <input type="text" name="title" class="form-control" value="<%= h(@memo[:title]) if @memo %>">
     </div>
   </div>
   <div class="form-group">
     <div class="w-50">
-      <textarea name="memo" class="form-control" id="exampleFormControlTextarea1" rows="10"><%= @memo[:memo] if @memo %></textarea>
+      <textarea name="memo" class="form-control" id="exampleFormControlTextarea1" rows="10"><%= h(@memo[:memo]) if @memo %></textarea>
     </div>
   </div>
   <div class="form-group">

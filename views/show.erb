@@ -1,13 +1,13 @@
 <div class="container">
   <div class="form-group">
     <div class="w-50">
-      <input type="text" name="title" class="form-control" readonly value="<%= @memo[:title] if @memo %>">
+      <input type="text" name="title" class="form-control" readonly value="<%= h(@memo[:title]) if @memo %>">
     </div>
   </div>
 
   <div class="form-group">
     <div class="w-50">
-      <textarea name="memo" class="form-control" id="exampleFormControlTextarea1" readonly rows="10"><%= @memo[:memo] if @memo %></textarea>
+      <textarea name="memo" class="form-control" id="exampleFormControlTextarea1" readonly rows="10"><%= h(@memo[:memo]) if @memo %></textarea>
     </div>
   </div>
 
